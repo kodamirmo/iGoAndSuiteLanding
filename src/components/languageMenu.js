@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import { Select, MenuItem } from '@material-ui/core';
-import { useTranslation } from "react-i18next"
+import React, { useState } from 'react'
+import { Select, MenuItem } from '@material-ui/core'
+import { useTranslation } from 'react-i18next'
 
 const LanguageMenu = (props) => {
   const { i18n } = useTranslation()

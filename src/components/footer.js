@@ -1,6 +1,6 @@
 
-import React from 'react';
-import LanguageMenu from './languageMenu';
+import React from 'react'
+import LanguageMenu from './languageMenu'
 
 const Footer = () => (
   <footer>

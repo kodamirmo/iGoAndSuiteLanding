@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from "prop-types"
-import { withTrans } from '../i18n/withTrans';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withTrans } from '../i18n/withTrans'
 
-import Header from './header';
-import Footer from './footer';
+import Header from './header'
+import Footer from './footer'
 
 const Layout = ({ children, t, i18n }) => {
   return (

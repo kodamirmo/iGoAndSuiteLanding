@@ -1,6 +1,31 @@
 {
   "main" : {
     "title": "¡Dile Hola a la eficiencia con iGo&See!",
-    "subtitle" : "La mejor estrategia para la solución de un problema es la prevención; forjar disciplina es el camino a la cultura preventiva."
+    "subtitle" : "La mejor estrategia para la solución de un problema es la prevención; forjar disciplina es el camino a la cultura preventiva.",
+    "demonstration" : "Request a demonstration",
+    "iGo&See_platformthat" : " iGo&See es una plataforma móvil que te permite administrar el sistema de cumplimiento de normas, incluyendo algunas herramientas como ISO, OSHA, 5’S, HACCP y Leader Standard Work.",
+    "all_audits" : "Todas tus auditorías, una plataforma",
+    "standard_work" : "Trabajo estándar para lideres",
+    "gemba_execution" : "Ejecución de Gemba Walk",
+    "corrective_actions" : "Acciones correctivas y tarjetas e-red",
+    "building_discipline" : "Disciplinar a tu equipo nunca había sido tan fácil",
+    "leader_reponsible" : "Como líder, eres el responsable de asegurarte que todos los miembros dentro de la organización realicen las operaciones y/o procesos de forma correcta, ¡en eso te puede ayudar iGo&See!",
+    "help_you" : "Establece procesos",
+    "unproductive_practices" : "Deja de lado las prácticas poco productivas",
+    "sustain_improvements" : "Sostén mejoras",
+    "comply_regulations" : "Cumple con los reglamentos todo el tiempo",
+    "regulation_compliance" : "Cumplimiento normativo",
+    "if_endanger" : "Si un estándar no se está cumpliendo puedes poner en riesgo la salud o incluso la vida de alguien. Como gerente, debes reconocer que el funcionamiento correcto de la organización es trabajo de todos.",
+    "time_money" : "Aprovecha al máximo tu tiempo y dinero",
+    "reports_audits" : "Reportes de finalización puntual de tus auditorias",
+    "reports_by" : "Reportes de tendencias de cumplimiento por Área/Líder",
+    "real_time_follow" : "Seguimiento en tiempo de Acciones Correctivas",
+    "automatic_reports" : "Reportes automáticos (PDF y exportable a Excel)",
+    "email_messages" : "Mensajes E-mail para reportar anormalidades",
+    "instant_notifications" : "Notificaciones instantáneas",
+    "igo_tag" : "el compañero ideal para Gemba Walk",
+    "description_igotag" : "¡No hay un par igual de efectivo que iGo&See y iGo&Tag! Juntos son un sistema integral que te permite crear, administrar y mantener una organización de clase mundial.",
+    "how_work" : "¿Cómo funciona?",
+    "work_igotag" : "Asegurando el cumplimiento a las reglas + dando seguimiento adecuado a las acciones correctivas y oportunidades de mejora"
   }  
 }

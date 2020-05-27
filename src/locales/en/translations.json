@@ -1,6 +1,31 @@
 {
   "main" : {
     "title" : "iGo&See… more like hello efficiency!",
-    "subtitle" : "The best strategy to problem solution is prevention; building discipline is the path to a prevention culture."
+    "subtitle" : "The best strategy to problem solution is prevention; building discipline is the path to a prevention culture.",
+    "demonstration" : "Request a demonstration",
+    "iGo&See_platformthat" : "iGo&See is a mobile platform that allows you tomanage your entire compliance system including ISO, OSHA, 5’S, HACCP and Leader Standard Work.",
+    "all_audits" : "All you audits, one platform",
+    "standard_work" : "Standard Work, for leaders",
+    "gemba_execution" : "Gemba Walk execution",
+    "corrective_actions" : "Corrective Actions and e-red Tags",
+    "building_discipline" : "Building discipline has never been easier",
+    "leader_reponsible" : "As a leader, you are responsible for making sure that everyone within your organization conduct operations as they should be done, that’s what iGo&See is here for!",
+    "help_you" : "Help you stabilize a process",
+    "unproductive_practices" : "Leave behind unproductive practices",
+    "sustain_improvements" : "Sustain improvements",
+    "comply_regulations" : "Comply with regulations all the time",
+    "regulation_compliance" : "Regulation compliance",
+    "if_endanger" : "If a standard is not met you can endanger someone’s life or health. As a manager, you should recognize that making sure the organization is always in compliance is everyone’s job.",
+    "time_money" : "Make the most of your time and money",
+    "reports_audits" : "On-time completion reports of your audits",
+    "reports_by" : "Compliance trend reports by Area/Leader",
+    "real_time_follow" : "Real-time follow up on corrective actions",
+    "automatic_reports" : "Automatic reports (PDF and export to excel)",
+    "email_messages" : "E-mail messages to report abnormalities",
+    "instant_notifications" : "Instant notifications",
+    "igo_tag" : "the ideal Gemba Walk companion",
+    "description_igotag" : "What a power couple iGo&See and iGo&Tag are! They make a comprehensive system that allows to create, manage, sustain a worldclass organization.",
+    "how_work" : "How does it work?",
+    "work_igotag" : "By assurance compliance with regulation + proper follow up of corrective actions and improvement opportunities."
   }  
 }

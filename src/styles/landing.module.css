@@ -2,12 +2,204 @@
 .section1,
 .section2,
 .section3,
+.section3b,
 .section4,
+.section4b,
 .section5,
 .section6,
 .section7,
 .section8,
 .section9,
 .section10 {
-  padding: 2.5rem 0;
+  padding: 96px;
+  flex-grow: 1;
 }
+
+/* --------------------- */
+/* --- MAIN SECTION  --- */
+/* --------------------- */
+.filterMain {
+  background-image: url('../images/banner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main {
+  padding: 35vh 96px 25vh 96px!important;
+  background-color: rgba(27, 65, 89, 0.72);
+  color: white;
+}
+
+/* -------------------- */
+/* ---- SECTION 1  ---- */
+/* -------------------- */
+.section1 {
+  text-align: center;
+}
+.iconImg {
+  height: 10vh;
+}
+
+/* -------------------- */
+/* ---- SECTION 2  ---- */
+/* -------------------- */
+.section2 {
+  background-color: #DEEEF8;
+}
+.contentSection2 {
+  text-align: center;
+}
+.iconSuccess {
+  color: #4caf50;
+}
+
+/* -------------------- */
+/* ---- SECTION 3  ---- */
+/* -------------------- */
+.section3 {
+  padding-bottom: 0!important;
+}
+.contentSection3,
+.contentSection4,
+.contentSection6,
+.contentSection7 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 0!important;
+}
+.phone1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0!important;
+}
+.phone1 img {
+  margin-bottom: 0;
+}
+/* SECTION 3.5 */
+.section3b {
+  background-image: url('../images/fondo-1.png');
+  text-align: center;
+}
+.section3b,
+.section4b {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 120px!important;
+}
+.infoBox {
+  border: 1px solid #03658C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 1rem 0 1rem;
+  border-radius: 15px;
+  height: 100%;
+}
+.iconBox {
+  color: #002740;
+  margin-bottom: 1rem;
+  font-size: 2.3rem!important;
+}
+
+/* -------------------- */
+/* ---- SECTION 4  ---- */
+/* -------------------- */
+.section4 {
+  padding-bottom: 0!important;
+}
+.titleSection4 span,
+.titleSection7 span {
+  color: #D4145A;
+}
+.section4b {
+  background-image: url('../images/fondo-2.png');
+}
+
+/* -------------------- */
+/* ---- SECTION 5  ---- */
+/* -------------------- */
+.section5 {
+  background-image: linear-gradient(
+    rgba(255, 0, 0, 0.45), 
+    rgba(255, 0, 0, 0.45)
+  ), url('../images/fondo-2.png');
+  text-align: center;
+  background-repeat-y: no-repeat;
+  background-position: 0% 100%;
+  background-size: 50%
+}
+
+/* -------------------- */
+/* ---- SECTION 6  ---- */
+/* -------------------- */
+.textSection6 {
+  text-align: center;
+}
+
+/* -------------------- */
+/* ---- SECTION 7  ---- */
+/* -------------------- */
+.section7 {
+  background-color: #FFFDE2;
+}
+.iconDanger {
+  color: #D4145A;
+}
+
+/*LARGE DESKTOP - Pantallas grandes - computadoras de escritorio*/
+@media (min-width: 1200px) {}
+
+/*MEDIUM DESKTOP - Escritorio medio - Tablet posición horizontal*/
+@media (max-width: 1199px) and (min-width: 992px) {
+  .iconImg {
+    height: 20vh;
+  }
+}
+
+/*TABLETS - Tablet posición vertical*/
+@media (max-width: 991px) and (min-width: 768px) {
+  .main h1, .main h3 {
+    text-align: center;
+  }
+  .main button {
+    width: 100%;
+  }
+  .iconImg {
+    height: 20vh;
+  }
+  .section3b {
+    padding-top: initial!important;
+  }
+}
+
+/*PHONES*/
+@media (max-width: 767px) and (min-width: 577px) {
+  .main h1, .main h3 {
+    text-align: center;
+  }
+  .main button {
+    width: 100%;
+  }
+  .iconImg {
+    height: 20vh;
+  }
+  .section3b {
+    padding-top: initial!important;
+  }
+}
+@media (max-width: 576px) {
+  .main h1, .main h3 {
+    text-align: center;
+  }
+  .main button {
+    width: 100%;
+  }
+  .iconImg {
+    height: 20vh;
+  }
+  .section3b {
+    padding-top: initial!important;
+  }
+}
+

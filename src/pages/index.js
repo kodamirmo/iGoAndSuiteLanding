@@ -1,149 +1,210 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import landingStyles from '../styles/landing.module.css';
-import { useTranslation } from 'react-i18next';
+import React from 'react'
+import { Grid, Button, List, ListItem, ListItemIcon, ListItemText, Box } from '@material-ui/core'
+import landingStyles from '../styles/landing.module.css'
+import { useTranslation } from 'react-i18next'
+import Video from '../components/video'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    padding: theme.spacing(12),
-  },
-}));
+import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn'
+import PinDropIcon from '@material-ui/icons/PinDrop'
+import PanToolIcon from '@material-ui/icons/PanTool'
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf'
+import EmailIcon from '@material-ui/icons/Email'
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive'
+import NotificationsIcon from '@material-ui/icons/Notifications'
+
+import notesLogo from '../images/notes.png'
+import userLogo from '../images/user.png'
+import userLogo2 from '../images/user-2.png'
+import statusLogo from '../images/status.png'
+import phone1 from '../images/1.png'
+import phone2 from '../images/4.png'
+import phone3 from '../images/3.png'
+import devicesImg from '../images/5.png'
 
 export default function Home() {
   const { t } = useTranslation();
-  const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <section className={landingStyles.main}>
-        <Grid container spacing={3}>
-          <Grid item md={7}>
-            <h1>{t(`main.title`)}</h1>
-            <p>{t(`main.subtitle`)}</p>
+    <>
+      <section className={landingStyles.filterMain}>
+        <div className={landingStyles.main}>
+          <Grid container spacing={3}>
+            <Grid item md={6}>
+              <h1>{t(`main.title`)}</h1>
+              <h2><small>{t(`main.subtitle`)}</small></h2>
+              <Button variant="contained" color="primary">
+                {t(`main.demonstration`)}
+              </Button>
+            </Grid>
+            <Grid item md={6}>&nbsp;</Grid>
           </Grid>
-          <Grid item md={5}>&nbsp;</Grid>
-        </Grid>
+        </div>
       </section>
 
       <section className={landingStyles.section1}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <p>
-              iGo&See is a mobile platformthat allows you tomanage your entire
-              compliance system including ISO, OSHA, 5’S, HACCP
-              andLeaderStandardWork.
-            </p>
+            <p>{t(`main.iGo&See_platformthat`)}</p>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>All you audits, one platform</p>
+
+          <Grid item xs={12}>
+            <Video
+              videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              videoTitle="Official Music Video on YouTube"
+            />
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>Standard Work, for leaders</p>
+
+          <Grid item xs={12} md={6} lg={3}>
+            <img className={landingStyles.iconImg} src={notesLogo} alt="" />
+            <p>{t(`main.all_audits`)}</p>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>Gemba Walk execution</p>
+          <Grid item xs={12} md={6} lg={3}>
+            <img className={landingStyles.iconImg} src={userLogo} alt="" />
+            <p>{t(`main.standard_work`)}</p>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>Corrective Actions and e-red Tags</p>
+          <Grid item xs={12} md={6} lg={3}>
+            <img className={landingStyles.iconImg} src={userLogo2} alt="" />
+            <p>{t(`main.gemba_execution`)}</p>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img className={landingStyles.iconImg} src={statusLogo} alt="" />
+            <p>{t(`main.corrective_actions`)}</p>
           </Grid>
         </Grid>
       </section>
 
       <section className={landingStyles.section2}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <h3>Building discipline has neverbeen easier</h3>
-            <p>
-              As a leader, you are responsible for making sure that everyone
-              within your organization conduct operations as they should be
-              done.
-            </p>
+          <Grid item xs={12} className={landingStyles.contentSection2}>
+            <h2>{t(`main.building_discipline`)}</h2>
+            <p>{t(`main.leader_reponsible`)}</p>
           </Grid>
           <Grid item md={6}>
-            <ul>
-              <li>Help you stabilize a process</li>
-              <li>Leave behind unproductive practices</li>
-            </ul>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t(`main.help_you`)}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t(`main.unproductive_practices`)}
+                />
+              </ListItem>
+            </List>
           </Grid>
           <Grid item md={6}>
-            <ul>
-              <li>Sustain improvements</li>
-              <li>Comply with regulations all the time</li>
-            </ul>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t(`main.sustain_improvements`)}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t(`main.comply_regulations`)}
+                />
+              </ListItem>
+            </List>
           </Grid>
         </Grid>
       </section>
 
       <section className={landingStyles.section3}>
         <Grid container spacing={3}>
-          <Grid item md={8}>
-            <h3>Regulation compliance</h3>
-            <p>
-              If a standard is not met you can endanger someone’s life or
-              health. As a manager, you should recognize that making sure the
-              organization is always in compliance is everyone’s job.
-            </p>
+          <Grid item xs={12} md={7} className={landingStyles.contentSection3}>
+            <h2>{t(`main.regulation_compliance`)}</h2>
+            <p>{t(`main.if_endanger`)}</p>
           </Grid>
 
-          <Grid item md={4}>
+          <Grid item xs={12} md={5} className={landingStyles.phone1}>
+            <img src={phone1} alt="" />
           </Grid>
         </Grid>
+      </section>
 
+      <section className={landingStyles.section3b}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <h3>Make the most of your time and money</h3>
+            <h2>{t(`main.time_money`)}</h2>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>On-time completion reports of your audits.</p>
+          <Grid item xs={12} md={6} lg={4}>
+            <Box className={landingStyles.infoBox}>
+              <AssignmentTurnedInIcon className={landingStyles.iconBox} />
+              <p>{t(`main.reports_audits`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>Compliance trend reports by Area/Leader.</p>
+          <Grid item xs={12} md={6} lg={4}>
+            <Box className={landingStyles.infoBox}>
+              <PinDropIcon className={landingStyles.iconBox} />
+              <p>{t(`main.reports_by`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>Real-time follow up on corrective actions.</p>
+          <Grid item xs={12} md={6} lg={4}>
+            <Box className={landingStyles.infoBox}>
+              <PanToolIcon className={landingStyles.iconBox} />
+              <p>{t(`main.real_time_follow`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>Automatic reports (PDF and export to excel).</p>
+          <Grid item xs={12} md={6} lg={4}>
+            <Box className={landingStyles.infoBox}>
+              <PictureAsPdfIcon className={landingStyles.iconBox} />
+              <p>{t(`main.automatic_reports`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>E-mail messages to report abnormalities.</p>
+          <Grid item xs={12} md={6} lg={4}>
+            <Box className={landingStyles.infoBox}>
+              <EmailIcon className={landingStyles.iconBox} />
+              <p>{t(`main.email_messages`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6} lg={3}>
-            <p>Instant notifications.</p>
+          <Grid item xs={12} md={6} lg={4}>
+            <Box className={landingStyles.infoBox}>
+              <NotificationsActiveIcon className={landingStyles.iconBox} />
+              <p>{t(`main.instant_notifications`)}</p>
+            </Box>
           </Grid>
         </Grid>
       </section>
 
       <section className={landingStyles.section4}>
         <Grid container spacing={3}>
-          <Grid item md={4}>
-            &nbsp;
+          <Grid item xs={12} md={4} className={landingStyles.phone1}>
+            <img src={phone2} alt="" />
           </Grid>
-          <Grid item md={8}>
-            <h3>
-              iGo&Tag:
+          <Grid item xs={12} md={8} className={landingStyles.contentSection4}>
+            <h2 className={landingStyles.titleSection4}>
+              <span>iGo&Tag:</span>
               <br />
-              the ideal Gemba Walk companion
-            </h3>
-            <p>
-              What a power couple iGo&See and iGo&Tag are! They make a
-              comprehensive system that allows to create, manage, sustain a
-              worldclass organization.
-            </p>
+              {t(`main.igo_tag`)}
+            </h2>
+            <p>{t(`main.description_igotag`)}</p>
           </Grid>
         </Grid>
+      </section>
 
+      <section className={landingStyles.section4b}>
         <Grid container spacing={3}>
-          <Grid item md={4}>
-            <h3>How does it work?</h3>
+          <Grid item xs={12} md={4}>
+            <h2 className={landingStyles.titleSection4}>
+              <span>{t(`main.how_work`)}</span>
+            </h2>
           </Grid>
-          <Grid item md={8}>
-            <p>
-              By assurance compliance with regulation + proper follow up of
-              corrective actions and improvement opportunities.
-            </p>
+          <Grid item xs={12} md={8}>
+            <p>{t(`main.work_igotag`)}</p>
           </Grid>
         </Grid>
       </section>
@@ -151,7 +212,8 @@ export default function Home() {
       <section className={landingStyles.section5}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <h3>The more you know!</h3>
+            <h2>The more you know!</h2>
+            <img src={devicesImg} alt="" />
             <p>
               Red Tags are used in your 5S program or to report abnormalities
               detected during your audits or Gemba Walks. With iGo&Tag app,
@@ -163,11 +225,11 @@ export default function Home() {
 
       <section className={landingStyles.section6}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <h3>Ensure the production areas receive the right Support</h3>
-            <h3>
+          <Grid item xs={12} className={landingStyles.textSection6}>
+            <h2>Ensure the production areas receive the right Support</h2>
+            <h2>
               <small>Generate ANDON signals with a touch of the screen</small>
-            </h3>
+            </h2>
             <p>
               Red Tags are used in your 5S program or to report abnormalities
               detected during your audits or Gemba Walks. With iGo&Tag app,
@@ -177,15 +239,45 @@ export default function Home() {
         </Grid>
 
         <Grid container spacing={3}>
-          <Grid item xs={6}>
-            <ul>
-              <li>Ensures the signal is received by the correct person </li>
-              <li>Measure the response time of you support personnel</li>
-              <li>Escalate alert when an ANDON is not attended</li>
-              <li>Run performance reports</li>
-            </ul>
+          <Grid item xs={6} className={landingStyles.contentSection6}>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Ensures the signal is received by the correct person"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Measure the response time of you support personnel"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Escalate alert when an ANDON is not attended"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Run performance reports"
+                />
+              </ListItem>
+            </List>
           </Grid>
-          <Grid item xs={6}></Grid>
+          <Grid item xs={6}>
+            <img src={phone3} alt="" />
+          </Grid>
         </Grid>
       </section>
 
@@ -198,28 +290,51 @@ export default function Home() {
               performance metrics are impacted.
             </p>
           </Grid>
-          <Grid item md={8}>
-            <h3>Some common examples:</h3>
+          <Grid item xs={12} md={6} className={landingStyles.contentSection7}>
+            <h2 className={landingStyles.titleSection7}>
+              <span>Some common examples:</span>
+            </h2>
           </Grid>
-          <Grid item md={4}>
-            <ul>
-              <li>Report quality problems</li>
-              <li>Report machine abnormalities</li>
-              <li>Require replenishment of raw material</li>
-            </ul>
+          <Grid item xs={12} md={6}>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <NotificationsIcon className={landingStyles.iconDanger} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Report quality problems"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <NotificationsIcon className={landingStyles.iconDanger} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Report machine abnormalities"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <NotificationsIcon className={landingStyles.iconDanger} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Require replenishment of raw material"
+                />
+              </ListItem>
+            </List>
           </Grid>
         </Grid>
       </section>
 
       <section className={landingStyles.section8}>
         <Grid container spacing={3}>
-          <Grid item md={8}>
+          <Grid item xs={12} md={8}>
             <p>
               The key to meeting your goals for the day is reaching them hour
               by hour and a digital blackboard will be your best ally for this
               purpose.
             </p>
-            <h3>iGo&Track allows you:</h3>
+            <h2>iGo&Track allows you:</h2>
             <p>Easily create digital blackboards for any workday</p>
             <p>Set individual goals for each hour</p>
             <p>
@@ -227,7 +342,7 @@ export default function Home() {
               the area.
             </p>
           </Grid>
-          <Grid item md={4}></Grid>
+          <Grid item xs={12} md={4}></Grid>
         </Grid>
       </section>
 
@@ -270,6 +385,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </section>
-    </div>
+    </>
   )
 }

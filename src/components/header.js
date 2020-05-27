@@ -1,35 +1,42 @@
-import React from 'react';
-import { AppBar, Toolbar, Button, IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
+import React, { Component } from 'react'
+import { AppBar, Toolbar, Button, IconButton } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
+class Header extends Component {
+  constructor (props) {
+    super(props);
 
-const Header = () => {
-  const classes = useStyles();
+    if (typeof window !== 'undefined') {
+      let prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        const maxScroll = document.body.clientHeight - window.innerHeight;
+        let currentScrollPos = window.pageYOffset;
+        if (
+            (maxScroll > 0 && prevScrollpos > currentScrollPos && prevScrollpos <= maxScroll) 
+          || (maxScroll <= 0 && prevScrollpos > currentScrollPos)
+          || (prevScrollpos <= 0 && currentScrollPos <= 0)
+          ) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-5.0rem"; // adjustable based your need
+        }
+        prevScrollpos = currentScrollPos;
+      }
+    }
+  }
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
+  render() {
+    return (
+      <AppBar id="navbar">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Button color="inherit">Init</Button>
         </Toolbar>
       </AppBar>
-    </div>
-  );
+    );
+  }
 }
 
 export default Header;
