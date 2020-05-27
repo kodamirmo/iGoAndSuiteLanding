@@ -20,6 +20,7 @@ import statusLogo from '../images/status.png'
 import phone1 from '../images/1.png'
 import phone2 from '../images/4.png'
 import phone3 from '../images/3.png'
+import tabletImg from '../images/tablet.png'
 import devicesImg from '../images/5.png'
 
 export default function Home() {
@@ -33,7 +34,7 @@ export default function Home() {
             <Grid item md={6}>
               <h1>{t(`main.title`)}</h1>
               <h2><small>{t(`main.subtitle`)}</small></h2>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" className={landingStyles.btnMainButton}>
                 {t(`main.demonstration`)}
               </Button>
             </Grid>
@@ -212,13 +213,9 @@ export default function Home() {
       <section className={landingStyles.section5}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <h2>The more you know!</h2>
+            <h2>{t(`main.more_know`)}</h2>
             <img src={devicesImg} alt="" />
-            <p>
-              Red Tags are used in your 5S program or to report abnormalities
-              detected during your audits or Gemba Walks. With iGo&Tag app,
-              you can manage e-red tags until these are successfully closed.
-            </p>
+            <p>{t(`main.red_tags`)}</p>
           </Grid>
         </Grid>
       </section>
@@ -226,27 +223,22 @@ export default function Home() {
       <section className={landingStyles.section6}>
         <Grid container spacing={3}>
           <Grid item xs={12} className={landingStyles.textSection6}>
-            <h2>Ensure the production areas receive the right Support</h2>
+            <h2>{t(`main.ensure_production`)}</h2>
             <h2>
-              <small>Generate ANDON signals with a touch of the screen</small>
+              <small>{t(`main.generate_andon`)}</small>
             </h2>
-            <p>
-              Red Tags are used in your 5S program or to report abnormalities
-              detected during your audits or Gemba Walks. With iGo&Tag app,
-              you can manage e-red tags until these are successfully closed.
-            </p>
           </Grid>
         </Grid>
 
         <Grid container spacing={3}>
-          <Grid item xs={6} className={landingStyles.contentSection6}>
+          <Grid item xs={12} md={6} className={landingStyles.contentSection6}>
             <List>
               <ListItem>
                 <ListItemIcon>
                   <CheckCircleIcon className={landingStyles.iconSuccess} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Ensures the signal is received by the correct person"
+                  primary={t(`main.ensures_signal`)}
                 />
               </ListItem>
               <ListItem>
@@ -254,7 +246,7 @@ export default function Home() {
                   <CheckCircleIcon className={landingStyles.iconSuccess} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Measure the response time of you support personnel"
+                  primary={t(`main.measure_response`)}
                 />
               </ListItem>
               <ListItem>
@@ -262,7 +254,7 @@ export default function Home() {
                   <CheckCircleIcon className={landingStyles.iconSuccess} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Escalate alert when an ANDON is not attended"
+                  primary={t(`main.escalate_alert`)}
                 />
               </ListItem>
               <ListItem>
@@ -270,12 +262,12 @@ export default function Home() {
                   <CheckCircleIcon className={landingStyles.iconSuccess} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Run performance reports"
+                  primary={t(`main.run_reports`)}
                 />
               </ListItem>
             </List>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <img src={phone3} alt="" />
           </Grid>
         </Grid>
@@ -284,15 +276,11 @@ export default function Home() {
       <section className={landingStyles.section7}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <p>
-              E-Andon is a system that allows production operators to ask for
-              help when they detect any abnormality in their area before
-              performance metrics are impacted.
-            </p>
+            <p>{t(`main.eandon_system`)}</p>
           </Grid>
           <Grid item xs={12} md={6} className={landingStyles.contentSection7}>
             <h2 className={landingStyles.titleSection7}>
-              <span>Some common examples:</span>
+              <span>{t(`main.some_examples`)}:</span>
             </h2>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -302,7 +290,7 @@ export default function Home() {
                   <NotificationsIcon className={landingStyles.iconDanger} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Report quality problems"
+                  primary={t(`main.report_quality`)}
                 />
               </ListItem>
               <ListItem>
@@ -310,7 +298,7 @@ export default function Home() {
                   <NotificationsIcon className={landingStyles.iconDanger} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Report machine abnormalities"
+                  primary={t(`main.report_abnormalities`)}
                 />
               </ListItem>
               <ListItem>
@@ -318,7 +306,7 @@ export default function Home() {
                   <NotificationsIcon className={landingStyles.iconDanger} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Require replenishment of raw material"
+                  primary={t(`main.require_replenishment`)}
                 />
               </ListItem>
             </List>
@@ -328,60 +316,80 @@ export default function Home() {
 
       <section className={landingStyles.section8}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={8}>
-            <p>
-              The key to meeting your goals for the day is reaching them hour
-              by hour and a digital blackboard will be your best ally for this
-              purpose.
-            </p>
-            <h2>iGo&Track allows you:</h2>
-            <p>Easily create digital blackboards for any workday</p>
-            <p>Set individual goals for each hour</p>
-            <p>
-              Capture both the production output and the reasons that affected
-              the area.
-            </p>
+          <Grid item xs={12} md={7} className={landingStyles.contentSection8}>
+            <p>{t(`main.key_meeting`)}</p>
+            <h2>
+              <span className={landingStyles.titleNormal}>iGo&Track</span>{' '}
+              {t(`main.allows_you`)}:
+            </h2>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t(`main.easily_blackboards`)}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t(`main.set_individual`)}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon className={landingStyles.iconSuccess} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t(`main.capture_production`)}
+                />
+              </ListItem>
+            </List>
           </Grid>
-          <Grid item xs={12} md={4}></Grid>
+          <Grid item xs={12} md={3} className={landingStyles.contentImgTrack}>
+            <img src={tabletImg} alt="" />
+          </Grid>
         </Grid>
       </section>
 
       <section className={landingStyles.section9}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <p>
-              The information is power and iGo&Track puts that power in your
-              hands, wherever you are:
-            </p>
+            <h3>{t(`main.information_power`)}:</h3>
           </Grid>
-          <Grid item md={6}>
-            <p>Create discipline in capturing information every hour</p>
+          <Grid item xs={12} md={6}>
+            <Box className={landingStyles.imgBox}>
+              <p>{t(`main.create_discipline`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6}>
-            <p>
-              Generates automatics reports of shift start and end of the day
-              and automatically distributes them in PDF format.
-            </p>
+          <Grid item xs={12} md={6}>
+            <Box className={landingStyles.imgBox}>
+              <p>{t(`main.generates_reports`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6}>
-            <p>
-              It allows to know the production status in any time from any
-              mobile device
-            </p>
+          <Grid item xs={12} md={6}>
+            <Box className={landingStyles.imgBox}>
+              <p>{t(`main.allows_production`)}</p>
+            </Box>
           </Grid>
-          <Grid item md={6}>
-            <p>
-              All generated information available for analysis in Excel or
-              Power-BI.
-            </p>
+          <Grid item xs={12} md={6}>
+            <Box className={landingStyles.imgBox}>
+              <p>{t(`main.all_generated`)}</p>
+            </Box>
           </Grid>
         </Grid>
       </section>
 
       <section className={landingStyles.section10}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <p>Mobile solutions are the industry's future, leap into it!</p>
+          <Grid item xs={12} className={landingStyles.contentText}>
+            <h1>{t(`main.mobile_solutions`)}</h1>
+            <Button variant="contained" className={landingStyles.btnMainButton}>
+              {t(`main.demonstration`)}
+            </Button>
           </Grid>
         </Grid>
       </section>

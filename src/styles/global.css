@@ -22,6 +22,10 @@ section,
 summary {
   display: block;
 }
+footer {
+  background-color: #002740;
+  color: white;
+}
 audio,
 canvas,
 progress,
