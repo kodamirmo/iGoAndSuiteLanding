@@ -35,6 +35,44 @@ footer hr {
   background-color: white;
   margin: 3rem 0;
 }
+footer p {
+  font-size: 1rem;
+}
+footer p span {
+  display: flex;
+}
+footer p span svg {
+  margin-right: 0.5rem;
+}
+footer p a {
+  text-decoration: none!important;
+  color: white!important;
+  text-shadow: none;
+  background-image: linear-gradient(
+    to top, rgba(0, 0, 0, 0), 
+    rgba(0, 0, 0, 0) 1px, 
+    transparent 1px, 
+    transparent 2px, 
+    rgba(0, 0, 0, 0) 2px);
+}
+footer p a:hover {
+  color: #ccc!important;
+  text-shadow: none;
+}
+.logoTranslated {
+  width: 25%;
+  margin-bottom: 0!important;
+}
+.selectLanguage .MuiSelect-root {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0!important;
+}
+.selectLanguage .MuiListItemIcon-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .logoFooter {
   width: 80%;
   margin: auto;

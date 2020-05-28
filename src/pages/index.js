@@ -51,8 +51,8 @@ export default function Home() {
 
           <Grid item xs={12}>
             <Video
-              videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              videoTitle="Official Music Video on YouTube"
+              videoSrcURL="https://www.youtube.com/embed/PE3h1NDseVw"
+              videoTitle="iGoandSee Suite"
             />
           </Grid>
 

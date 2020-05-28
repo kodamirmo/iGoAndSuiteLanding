@@ -3,9 +3,10 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import LanguageMenu from './languageMenu'
 import logo from '../images/logo-suite.png'
+import EmailIcon from '@material-ui/icons/Email'
 
 const Footer = (props) => {
-  const { company, blog, support, privacy } = props;
+  const { trans } = props;
   return (
     <footer>
       <Grid container spacing={3}>
@@ -15,16 +16,27 @@ const Footer = (props) => {
         <Grid item xs={12} md={10}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <h3>{company}</h3>
+              <h3>{trans.company}</h3>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <p>{blog}</p>
+            <Grid item xs={12} md={6}>
+              <p>
+                <a href="https://blog.igoandsee.com/en/" target="_blank" rel="noreferrer">
+                  {trans.blog}
+                </a>
+              </p>
+              <p>{trans.privacy}</p>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <p>{support}</p>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <p>{privacy}</p>
+            <Grid item xs={12} md={6}>
+              <p>{trans.support}</p>
+              <p>
+                {trans.contact}<br />
+                <span>
+                  <EmailIcon />{''}
+                  <a href="mailto:xiara.sanchez@goandsee.co" rel="noreferrer">
+                    xiara.sanchez@goandsee.co
+                  </a>
+                </span>
+              </p>
             </Grid>
           </Grid>
         </Grid>
@@ -38,6 +50,7 @@ const Footer = (props) => {
             <p>©iGo&See</p>
           </Grid>
           <Grid item xs={6} className="languageFooter">
+            {trans.language}
             <LanguageMenu />
           </Grid>
         </Grid>

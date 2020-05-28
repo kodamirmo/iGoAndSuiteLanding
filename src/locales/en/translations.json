@@ -56,6 +56,8 @@
     "company" : "Company",
     "blog" : "Blog",
     "support" : "Support",
-    "privacy_terms" : "Privacy Policy & terms of service"
+    "privacy_terms" : "Privacy Policy & terms of service",
+    "contact_team" : "Contact the iGo&See Suite team",
+    "language" : "Language"
   }
 }

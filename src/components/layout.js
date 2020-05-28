@@ -8,21 +8,20 @@ import Footer from './footer'
 const Layout = ({ children, t, i18n }) => {
 
   const translatedTitle = t(`main.demonstration`)
-  const translatedCompany = t(`footer.company`)
-  const translatedBlog = t(`footer.blog`)
-  const translatedSupport = t(`footer.support`)
-  const translatedPrivacy = t(`footer.privacy_terms`)
+  const translated = {
+    company : t(`footer.company`),
+    blog : t(`footer.blog`),
+    support : t(`footer.support`),
+    privacy : t(`footer.privacy_terms`),
+    contact : t(`footer.contact_team`),
+    language : t(`footer.language`),
+  }
 
   return (
     <>
       <Header btnTitle={translatedTitle} />
       <main>{children}</main>
-      <Footer
-        company={translatedCompany}
-        blog={translatedBlog}
-        support={translatedSupport}
-        privacy={translatedPrivacy}
-      />
+      <Footer trans={translated} />
     </>
   );
 };
