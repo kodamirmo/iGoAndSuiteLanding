@@ -2,7 +2,7 @@
   "main" : {
     "title": "¡Dile Hola a la eficiencia con iGo&See!",
     "subtitle" : "La mejor estrategia para la solución de un problema es la prevención; forjar disciplina es el camino a la cultura preventiva.",
-    "demonstration" : "Request a demonstration",
+    "demonstration" : "Solicitar una demostración",
     "iGo&See_platformthat" : " iGo&See es una plataforma móvil que te permite administrar el sistema de cumplimiento de normas, incluyendo algunas herramientas como ISO, OSHA, 5’S, HACCP y Leader Standard Work.",
     "all_audits" : "Todas tus auditorías, una plataforma",
     "standard_work" : "Trabajo estándar para lideres",
@@ -51,5 +51,11 @@
     "allows_production" : "Permite saber el estado de producción en cualquier momento desde cualquier dispositivo móvil",
     "all_generated" : "Toda la información generada disponible para análisis en Excel o Power-BI",
     "mobile_solutions" : "¡Las soluciones móviles son el futuro de la industria, salte a ellas!"
-  }  
+  },
+  "footer" : {
+    "company" : "Empresa",
+    "blog" : "Blog",
+    "support" : "Soporte",
+    "privacy_terms" : "Política de privacidad & términos de servicio"
+  }
 }

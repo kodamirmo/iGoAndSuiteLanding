@@ -25,6 +25,22 @@ summary {
 footer {
   background-color: #002740;
   color: white;
+  flex-grow: 1;
+  padding: 150px 96px 10px 96px;
+}
+footer .MuiInputBase-root.MuiInput-root {
+  color: white!important;
+}
+footer hr {
+  background-color: white;
+  margin: 3rem 0;
+}
+.logoFooter {
+  width: 80%;
+  margin: auto;
+}
+.languageFooter {
+  text-align: right;
 }
 audio,
 canvas,
@@ -88,7 +104,7 @@ dfn {
   justify-content: space-between;
 }
 #navbar img {
-  width: 20vw;
+  width: 15vw;
   margin-bottom: 0;
 }
 .MuiAppBar-colorPrimary {

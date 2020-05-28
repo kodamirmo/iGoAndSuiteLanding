@@ -51,5 +51,11 @@
     "allows_production" : "It allows to know the production status in any time from any mobile device",
     "all_generated" : "All generated information available for analysis in Excel or Power-BI.",
     "mobile_solutions" : "Mobile solutions are the industry's future, leap into it!"
-  }  
+  },
+  "footer" : {
+    "company" : "Company",
+    "blog" : "Blog",
+    "support" : "Support",
+    "privacy_terms" : "Privacy Policy & terms of service"
+  }
 }

@@ -31,7 +31,7 @@ class Header extends Component {
     return (
       <AppBar id="navbar">
         <Toolbar>
-          <img src={logoH} edge="start" color="inherit" aria-label="menu" />
+          <img src={logoH} alt="iGo&Suite" />
           <Button variant="contained" className="btn-main">
             {btnTitle}
           </Button>

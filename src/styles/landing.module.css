@@ -230,7 +230,7 @@
 
 /*TABLETS - Tablet posición vertical*/
 @media (max-width: 991px) and (min-width: 768px) {
-  .main h1, .main h3 {
+  .main h1, .main h2 {
     text-align: center;
   }
   .main button {
@@ -267,7 +267,7 @@
 
 /*PHONES*/
 @media (max-width: 767px) and (min-width: 577px) {
-  .main h1, .main h3 {
+  .main h1, .main h2 {
     text-align: center;
   }
   .main button {
@@ -302,7 +302,7 @@
   }
 }
 @media (max-width: 576px) {
-  .main h1, .main h3 {
+  .main h1, .main h2 {
     text-align: center;
   }
   .main button {
