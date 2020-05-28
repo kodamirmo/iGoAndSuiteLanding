@@ -6,9 +6,12 @@ import Header from './header'
 import Footer from './footer'
 
 const Layout = ({ children, t, i18n }) => {
+
+  const translatedTitle = t(`main.demonstration`)
+
   return (
     <>
-      <Header />
+      <Header btnTitle={translatedTitle} />
       <main>{children}</main>
       <Footer />
     </>

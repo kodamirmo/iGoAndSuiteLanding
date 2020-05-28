@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { AppBar, Toolbar, Button, IconButton } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
+import { AppBar, Toolbar, Button } from '@material-ui/core'
+import logoH from '../images/logo-suite-h.png'
 
 class Header extends Component {
   constructor (props) {
@@ -26,13 +26,15 @@ class Header extends Component {
   }
 
   render() {
+    const { btnTitle } = this.props;
+
     return (
       <AppBar id="navbar">
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Button color="inherit">Init</Button>
+          <img src={logoH} edge="start" color="inherit" aria-label="menu" />
+          <Button variant="contained" className="btn-main">
+            {btnTitle}
+          </Button>
         </Toolbar>
       </AppBar>
     );

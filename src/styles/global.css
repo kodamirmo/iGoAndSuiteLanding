@@ -81,6 +81,19 @@ dfn {
 #navbar {
   transition: top 0.5s;
 }
+#navbar div {
+  transition: top 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navbar img {
+  width: 20vw;
+  margin-bottom: 0;
+}
+.MuiAppBar-colorPrimary {
+  background-color: #18374b!important;
+}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -204,6 +217,13 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
+}
+.btn-main {
+  background-color: #0086D9!important;
+  color: white!important;
+}
+.btn-main:hover {
+  background-color: #00568C!important;
 }
 html {
   font: 112.5%/1.45em georgia, serif;
