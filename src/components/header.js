@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { AppBar, Toolbar, Button } from '@material-ui/core'
 import logoH from '../images/logo-suite-h.png'
+import BtnDemonstration from './btnDemonstration';
 
 class Header extends Component {
   constructor (props) {
@@ -26,14 +27,13 @@ class Header extends Component {
   }
 
   render() {
-    const { btnTitle } = this.props;
 
     return (
       <AppBar id="navbar">
         <Toolbar>
           <img src={logoH} alt="iGo&Suite" />
           <Button variant="contained" className="btn-main">
-            {btnTitle}
+            <BtnDemonstration />
           </Button>
         </Toolbar>
       </AppBar>

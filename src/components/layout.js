@@ -7,7 +7,6 @@ import Footer from './footer'
 
 const Layout = ({ children, t, i18n }) => {
 
-  const translatedTitle = t(`main.demonstration`)
   const translated = {
     company : t(`footer.company`),
     blog : t(`footer.blog`),
@@ -19,7 +18,7 @@ const Layout = ({ children, t, i18n }) => {
 
   return (
     <>
-      <Header btnTitle={translatedTitle} />
+      <Header />
       <main>{children}</main>
       <Footer trans={translated} />
     </>

@@ -22,6 +22,7 @@ import phone2 from '../images/4.png'
 import phone3 from '../images/3.png'
 import tabletImg from '../images/tablet.png'
 import devicesImg from '../images/5.png'
+import BtnDemonstration from '../components/btnDemonstration'
 
 export default function Home() {
   const { t } = useTranslation();
@@ -35,7 +36,7 @@ export default function Home() {
               <h1>{t(`main.title`)}</h1>
               <h2><small>{t(`main.subtitle`)}</small></h2>
               <Button variant="contained" className={landingStyles.btnMainButton}>
-                {t(`main.demonstration`)}
+                <BtnDemonstration />
               </Button>
             </Grid>
             <Grid item md={6}>&nbsp;</Grid>
@@ -388,7 +389,7 @@ export default function Home() {
           <Grid item xs={12} className={landingStyles.contentText}>
             <h1>{t(`main.mobile_solutions`)}</h1>
             <Button variant="contained" className={landingStyles.btnMainButton}>
-              {t(`main.demonstration`)}
+              <BtnDemonstration />
             </Button>
           </Grid>
         </Grid>
