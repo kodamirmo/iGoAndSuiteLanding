@@ -39,13 +39,13 @@ export default function Home() {
         <div className={landingStyles.main}>
           <Grid container spacing={3}>
             <Grid item md={6}>
-            <Fade bottom cascade>
               <h1>{t(`main.title`)}</h1>
-              <h2><small>{t(`main.subtitle`)}</small></h2>
-              <Button variant="contained" className={landingStyles.btnMainButton}>
-                <BtnDemonstration />
-              </Button>
-            </Fade>
+              <Fade bottom cascade>
+                <h2><small>{t(`main.subtitle`)}</small></h2>
+                <Button variant="contained" className={landingStyles.btnMainButton}>
+                  <BtnDemonstration />
+                </Button>
+              </Fade>
             </Grid>
             <Grid item md={6}>&nbsp;</Grid>
           </Grid>
