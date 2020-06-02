@@ -16,16 +16,7 @@ export default function() {
       }}
       prefill={{
         customAnswers: {
-          a1: 'a1',
-          a10: 'a10',
-          a2: 'a2',
-          a3: 'a3',
-          a4: 'a4',
-          a5: 'a5',
-          a6: 'a6',
-          a7: 'a7',
-          a8: 'a8',
-          a9: 'a9'
+          a1: '',
         },
         email: '',
         firstName: '',
@@ -34,10 +25,10 @@ export default function() {
       }}
       text={t(`main.demonstration`)}
       textColor="#ffffff"
-      url="https://calendly.com/linda-lopez"
+      url="https://calendly.com/info-igoandsuite"
       utm={{
-        utmCampaign: 'Spring Sale 2019',
-        utmContent: 'Shoe and Shirts',
+        utmCampaign: 'Info iGo&Suite',
+        utmContent: 'Information',
         utmMedium: 'Ad',
         utmSource: 'Facebook',
         utmTerm: 'Spring'

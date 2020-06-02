@@ -2,6 +2,10 @@ import React from 'react'
 import { Grid, Button, List, ListItem, ListItemIcon, ListItemText, Box } from '@material-ui/core'
 import landingStyles from '../styles/landing.module.css'
 import { useTranslation } from 'react-i18next'
+import Zoom from 'react-reveal/Zoom'
+import Fade from 'react-reveal/Fade'
+import config from 'react-reveal/globals'
+
 import Video from '../components/video'
 
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
@@ -24,6 +28,8 @@ import tabletImg from '../images/tablet.png'
 import devicesImg from '../images/5.png'
 import BtnDemonstration from '../components/btnDemonstration'
 
+config({ ssrFadeout: true });
+
 export default function Home() {
   const { t } = useTranslation();
 
@@ -33,11 +39,13 @@ export default function Home() {
         <div className={landingStyles.main}>
           <Grid container spacing={3}>
             <Grid item md={6}>
+            <Fade bottom cascade>
               <h1>{t(`main.title`)}</h1>
               <h2><small>{t(`main.subtitle`)}</small></h2>
               <Button variant="contained" className={landingStyles.btnMainButton}>
                 <BtnDemonstration />
               </Button>
+            </Fade>
             </Grid>
             <Grid item md={6}>&nbsp;</Grid>
           </Grid>
@@ -58,20 +66,28 @@ export default function Home() {
           </Grid>
 
           <Grid item xs={12} md={6} lg={3}>
-            <img className={landingStyles.iconImg} src={notesLogo} alt="" />
-            <p>{t(`main.all_audits`)}</p>
+            <Zoom>
+              <img className={landingStyles.iconImg} src={notesLogo} alt="" />
+              <p>{t(`main.all_audits`)}</p>
+            </Zoom>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <img className={landingStyles.iconImg} src={userLogo} alt="" />
-            <p>{t(`main.standard_work`)}</p>
+            <Zoom>
+              <img className={landingStyles.iconImg} src={userLogo} alt="" />
+              <p>{t(`main.standard_work`)}</p>
+            </Zoom>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <img className={landingStyles.iconImg} src={userLogo2} alt="" />
-            <p>{t(`main.gemba_execution`)}</p>
+            <Zoom>
+              <img className={landingStyles.iconImg} src={userLogo2} alt="" />
+              <p>{t(`main.gemba_execution`)}</p>
+            </Zoom>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <img className={landingStyles.iconImg} src={statusLogo} alt="" />
-            <p>{t(`main.corrective_actions`)}</p>
+            <Zoom>
+              <img className={landingStyles.iconImg} src={statusLogo} alt="" />
+              <p>{t(`main.corrective_actions`)}</p>
+            </Zoom>
           </Grid>
         </Grid>
       </section>
@@ -133,7 +149,9 @@ export default function Home() {
           </Grid>
 
           <Grid item xs={12} md={5} className={landingStyles.phone1}>
-            <img src={phone1} alt="" />
+            <Zoom>
+              <img src={phone1} alt="" />
+            </Zoom>
           </Grid>
         </Grid>
       </section>
@@ -185,7 +203,9 @@ export default function Home() {
       <section className={landingStyles.section4}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={4} className={landingStyles.phone1}>
-            <img src={phone2} alt="" />
+            <Zoom>
+              <img src={phone2} alt="" />
+            </Zoom>
           </Grid>
           <Grid item xs={12} md={8} className={landingStyles.contentSection4}>
             <h2 className={landingStyles.titleSection4}>
@@ -269,7 +289,9 @@ export default function Home() {
             </List>
           </Grid>
           <Grid item xs={12} md={6}>
-            <img src={phone3} alt="" />
+            <Zoom>
+              <img src={phone3} alt="" />
+            </Zoom>
           </Grid>
         </Grid>
       </section>
@@ -351,7 +373,9 @@ export default function Home() {
             </List>
           </Grid>
           <Grid item xs={12} md={3} className={landingStyles.contentImgTrack}>
-            <img src={tabletImg} alt="" />
+            <Zoom>
+              <img src={tabletImg} alt="" />
+            </Zoom>
           </Grid>
         </Grid>
       </section>
@@ -387,10 +411,12 @@ export default function Home() {
       <section className={landingStyles.section10}>
         <Grid container spacing={3}>
           <Grid item xs={12} className={landingStyles.contentText}>
-            <h1>{t(`main.mobile_solutions`)}</h1>
-            <Button variant="contained" className={landingStyles.btnMainButton}>
-              <BtnDemonstration />
-            </Button>
+            <Fade bottom cascade>
+              <h1>{t(`main.mobile_solutions`)}</h1>
+              <Button variant="contained" className={landingStyles.btnMainButton}>
+                <BtnDemonstration />
+              </Button>
+            </Fade>
           </Grid>
         </Grid>
       </section>

@@ -24,6 +24,7 @@
     "react-calendly": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.5.0",
+    "react-reveal": "^1.2.2",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19"
