@@ -7,6 +7,7 @@ body {
   margin: 0!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: initial!important;
 }
 article,
 aside,
@@ -44,7 +45,7 @@ footer p span {
 footer p span svg {
   margin-right: 0.5rem;
 }
-footer p a {
+footer p a, span a {
   text-decoration: none!important;
   color: white!important;
   text-shadow: none;
