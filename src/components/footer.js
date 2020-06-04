@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Grid } from '@material-ui/core'
-import LanguageMenu from './languageMenu'
+// import LanguageMenu from './languageMenu'
 import logo from '../images/logo-suite.png'
 import EmailIcon from '@material-ui/icons/Email'
 
@@ -24,7 +24,11 @@ const Footer = (props) => {
                   {trans.blog}
                 </a>
               </p>
-              <p>{trans.privacy}</p>
+              <p>
+                <a href="https://www.igoandsee.com/privacyPolicy" target="_blank" rel="noreferrer">
+                  {trans.privacy}
+                </a>
+              </p>
             </Grid>
             <Grid item xs={12} md={6}>
               <p>{trans.support}</p>
@@ -49,10 +53,10 @@ const Footer = (props) => {
           <Grid item xs={6}>
             <p>©iGo&See</p>
           </Grid>
-          <Grid item xs={6} className="languageFooter">
+          {/* <Grid item xs={6} className="languageFooter">
             {trans.language}
             <LanguageMenu />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Grid>
     </footer>

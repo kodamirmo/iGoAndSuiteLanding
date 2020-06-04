@@ -20,11 +20,13 @@
     "gatsby-plugin-layout": "^1.3.2",
     "gatsby-plugin-typography": "^2.5.2",
     "i18next": "^19.4.5",
+    "material-ui-popup-state": "^1.5.4",
     "react": "^16.13.1",
     "react-calendly": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.5.0",
     "react-reveal": "^1.2.2",
+    "react-scrolltop-button": "^0.1.6",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19"

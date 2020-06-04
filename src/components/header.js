@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
-import { AppBar, Toolbar, Button } from '@material-ui/core'
+import { AppBar, Toolbar, Button, Menu, MenuItem } from '@material-ui/core'
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state'
 import logoH from '../images/logo-suite-h.png'
 import BtnDemonstration from './btnDemonstration';
+import LanguageMenu from './languageMenu'
+import MoreVertIcon from '@material-ui/icons/MoreVert'
 
 class Header extends Component {
   constructor (props) {
@@ -32,9 +35,39 @@ class Header extends Component {
       <AppBar id="navbar">
         <Toolbar>
           <img src={logoH} alt="iGo&Suite" />
-          <Button variant="contained" className="btn-main">
-            <BtnDemonstration />
-          </Button>
+
+          <div className="d-none d-md-block d-lg-block d-xl-block">
+            <div className="content-desktop">
+              <div className="language-header">
+                <LanguageMenu />
+              </div>
+              <Button variant="contained" className="btn-main">
+                <BtnDemonstration />
+              </Button>
+            </div>
+          </div>
+
+          <div className="d-block d-md-none d-lg-none d-xl-none">
+            <PopupState variant="popover" popupId="demo-popup-menu">
+              {(popupState) => (
+                <React.Fragment>
+                  <Button variant="contained" className="btn-movilMenu" {...bindTrigger(popupState)}>
+                    <MoreVertIcon />
+                  </Button>
+                  <Menu {...bindMenu(popupState)}>
+                    <MenuItem>
+                      <LanguageMenu />
+                    </MenuItem>
+                    <MenuItem>
+                      <Button variant="contained" className="btn-main">
+                        <BtnDemonstration />
+                      </Button>
+                    </MenuItem>
+                  </Menu>
+                </React.Fragment>
+              )}
+            </PopupState>
+          </div>
         </Toolbar>
       </AppBar>
     );
