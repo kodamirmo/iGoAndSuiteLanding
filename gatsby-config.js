@@ -22,6 +22,11 @@ module.exports = {
       options: {
         component: `${__dirname}/src/components/layout`
       }
-    }
+    },{
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "landing.igoandsee.com",
+      },
+    },
   ],
 }

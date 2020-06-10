@@ -64,15 +64,34 @@ footer p a:hover {
   width: 25%;
   margin-bottom: 0!important;
 }
+#navbar .content-desktop .selectLanguage {
+  color: white!important;
+  margin: 0 1rem;
+}
 .selectLanguage .MuiSelect-root {
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 0!important;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6px!important;
 }
 .selectLanguage .MuiListItemIcon-root {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#navbar .selectLanguage svg,
+footer .selectLanguage svg {
+  color: white!important;
+}
+.scroll-button {
+  border-radius: 50px;
+  border-color: #002740;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+.scroll-button:hover {
+  background-color: #002740;
 }
 .logoFooter {
   width: 80%;
@@ -136,7 +155,7 @@ dfn {
 #navbar {
   transition: top 0.5s;
 }
-#navbar div {
+#navbar div.MuiToolbar-root {
   transition: top 0.5s;
   display: flex;
   align-items: center;
@@ -145,6 +164,19 @@ dfn {
 #navbar img {
   width: 15vw;
   margin-bottom: 0;
+}
+#navbar .language-header img {
+  width: 1vw;
+  margin-bottom: 0;
+}
+#navbar .btn-movilMenu {
+  background-color: transparent!important;
+  box-shadow: initial!important;
+}
+#navbar .content-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .MuiAppBar-colorPrimary {
   background-color: #18374b!important;
@@ -571,18 +603,58 @@ p *:last-child {
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }
+.d-block {
+	display: block;
+}
+.d-none {
+	display: none;
+}
 
 @media (min-width: 1200px) {
-
+  .d-xl-block {
+		display: block!important;
+	}
+	.d-xl-none {
+		display: none!important;
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-
+  .d-lg-block {
+		display: block!important;
+	}
+	.d-lg-none {
+		display: none!important;
+	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .d-md-block {
+		display: block!important;
+	}
+	.d-md-none {
+		display: none!important;
+	}
   .video iframe {
     width: 100%;
     height: 100%;
     left: 0%;
+  }
+  .scroll-button {
+    height: initial;
+    width: initial;
+    padding: initial;
+  }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+  .d-sm-block {
+		display: block!important;
+	}
+	.d-sm-none {
+		display: none!important;
+  }
+  .scroll-button {
+    height: initial;
+    width: initial;
+    padding: initial;
   }
 }
 @media  only screen and (max-width: 576px) {
@@ -590,6 +662,11 @@ li > p {
     width: 100%;
     height: 100%;
     left: 0%;
+  }
+  .scroll-button {
+    height: initial;
+    width: initial;
+    padding: initial;
   }
   html {
     font-size: 100%;

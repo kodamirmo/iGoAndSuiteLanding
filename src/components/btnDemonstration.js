@@ -25,7 +25,7 @@ export default function() {
       }}
       text={t(`main.demonstration`)}
       textColor="#ffffff"
-      url="https://calendly.com/info-igoandsuite"
+      url="https://calendly.com/info-igoandsuite/60min"
       utm={{
         utmCampaign: 'Info iGo&Suite',
         utmContent: 'Information',
